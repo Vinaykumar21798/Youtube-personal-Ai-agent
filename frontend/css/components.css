@@ -1,0 +1,227 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-lime {
+  background-color: var(--color-lime);
+  color: #111416;
+}
+
+.btn-lime:hover {
+  background-color: var(--color-lime-hover);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  background-color: #1B1E20;
+  border: 1px solid var(--color-surface-dark-border);
+  color: var(--color-ink-on-dark);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-surface-dark-hover);
+  border-color: #3C4247;
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-ink-on-dark);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-surface-dark-card);
+  border: 1px solid var(--color-surface-dark-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+/* Stat Cards (Dashboard & Report) */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background-color: var(--color-surface-dark-card);
+  border: 1px solid var(--color-surface-dark-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-header {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-ink-on-dark-muted);
+  margin-bottom: 8px;
+}
+
+.stat-body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.stat-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  color: var(--color-ink-on-dark);
+}
+
+.stat-delta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-delta.up {
+  color: var(--color-success);
+}
+
+.stat-delta.down {
+  color: var(--color-danger);
+}
+
+.stat-sparkline {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 70px;
+  height: 32px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-lime {
+  background-color: var(--color-lime-soft);
+  color: var(--color-lime);
+  border: 1px solid rgba(196, 242, 44, 0.3);
+}
+
+.badge-terracotta {
+  background-color: var(--color-terracotta-soft);
+  color: var(--color-terracotta);
+}
+
+.badge-tag {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-ink-on-dark-muted);
+  text-transform: none;
+  font-weight: 500;
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
+/* Terminal Agent Activity Box */
+.terminal-box {
+  background-color: #0A0C0D;
+  border: 1px solid var(--color-surface-dark-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #C8D1D9;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.terminal-title {
+  color: var(--color-ink-on-dark-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.log-entry {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.log-time {
+  color: #6E7681;
+  flex-shrink: 0;
+}
+
+.log-text {
+  color: #E6EDF3;
+}
+
+.log-text.highlight {
+  color: var(--color-lime);
+}
+
+/* Progress bar */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #24292E;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-lime);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+/* Form Inputs */
+.input-field {
+  width: 100%;
+  background-color: #0E1011;
+  border: 1px solid var(--color-surface-dark-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: var(--color-ink-on-dark);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.input-field:focus {
+  border-color: var(--color-lime);
+}

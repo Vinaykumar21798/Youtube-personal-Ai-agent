@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowTube — Evidence-Based YouTube Growth Platform</title>
+  <meta name="description" content="Autonomous AI agent platform that analyzes retention drop-offs, conducts live YouTube research, and builds high-converting content strategies backed by evidence.">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="landing-body">
+
+  <!-- Header -->
+  <header class="landing-header">
+    <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+      </div>
+      <span style="font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em;">GrowTube</span>
+    </a>
+
+    <nav class="landing-nav" aria-label="Main Navigation">
+      <a href="#product">Product</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#resources">Resources</a>
+    </nav>
+
+    <div id="nav-auth-container" style="display: flex; align-items: center; gap: 16px;">
+      <a href="/login" id="nav-sign-in" style="font-size: 0.95rem; font-weight: 600; color: #333; text-decoration: none;">Sign in</a>
+      <a href="/login?return_to=%2Fanalyze" id="nav-get-started" class="btn" style="background-color: #111; color: #FFF; padding: 10px 22px; border-radius: var(--radius-sm); text-decoration: none;">Get Started →</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="landing-hero">
+    <div>
+      <div class="hero-pill">+ BUILT FOR SERIOUS CREATORS</div>
+      <h1 class="hero-title">Turn your YouTube data into real growth.</h1>
+      <p class="hero-subtext">
+        An agentic platform that analyzes, researches, and creates content strategies backed by evidence — not guesswork.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/login?return_to=%2Fanalyze" id="hero-cta-analyze" class="btn btn-lime" style="padding: 14px 28px; font-size: 1.05rem; text-decoration: none;">Start Analyzing →</a>
+        <a href="#how-it-works" id="hero-btn-how" class="btn btn-dark" style="background-color: transparent; color: #111; border: 1px solid #D5D0C5; padding: 14px 24px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+          See How It Works
+        </a>
+      </div>
+
+      <div class="hero-stats-bar">
+        <div class="hero-stat-item">
+          <h3>10K+</h3>
+          <p>Audited Videos</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>2.5M+</h3>
+          <p>Data Points Analyzed</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>94%</h3>
+          <p>Actionable Grounding</p>
+        </div>
+      </div>
+      <div style="margin-top: 10px; font-size: 0.72rem; color: #8E959B; font-style: italic;">
+        *Illustrative benchmark figures representing multi-tool agent audit volume and diagnostic precision.
+      </div>
+    </div>
+
+    <!-- Hero Visual Card -->
+    <div class="hero-visual-card">
+      <div style="width: 100%; height: 500px; background: linear-gradient(135deg, #1A1D20, #0D0E10); border-radius: 16px; position: relative; padding: 32px; overflow: hidden; color: #FFF;">
+        
+        <!-- Explanatory Workflow Pipeline Box (Non-interactive diagram) -->
+        <div class="hero-pipeline-box" aria-label="YouTube Growth Workflow Pipeline">
+          <div class="hero-pipeline-header">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#C4F22C"><circle cx="12" cy="12" r="10"/></svg>
+            <span>Agent Pipeline</span>
+          </div>
+          <div class="hero-pipeline-step"><span class="dot"></span> 01 Ideas</div>
+          <div class="hero-pipeline-step"><span class="dot"></span> 02 Research</div>
+          <div class="hero-pipeline-step active"><span class="dot"></span> 03 Analyze</div>
+          <div class="hero-pipeline-step"><span class="dot"></span> 04 Create</div>
+          <div class="hero-pipeline-step"><span class="dot"></span> 05 Grow</div>
+        </div>
+
+        <!-- Floating Metric Badge 1 -->
+        <div class="floating-badge" style="position: absolute; top: 40px; left: 32px; background: rgba(255,255,255,0.96); color: #111; border-radius: 12px; padding: 14px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <div style="font-size: 1.6rem; font-weight: 700; color: #111;">+182%</div>
+          <div style="font-size: 0.75rem; color: #666; font-weight: 600;">Avg. view growth</div>
+          <span class="badge-footnote">*Sample channel benchmark</span>
+        </div>
+
+        <!-- Floating Metric Badge 2 -->
+        <div class="floating-badge-views" style="position: absolute; bottom: 40px; right: 32px; background: rgba(255,255,255,0.96); color: #111; border-radius: 12px; padding: 16px 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <div style="font-size: 0.75rem; color: #666; font-weight: 600;">Total Views</div>
+          <div style="font-size: 1.8rem; font-weight: 700; color: #111;">2.4M</div>
+          <div style="font-size: 0.75rem; color: #2EC486; font-weight: 700;">↑ 182%</div>
+          <span class="badge-footnote">*Sample 90-day trajectory</span>
+        </div>
+
+        <div style="position: absolute; bottom: 32px; left: 32px; font-family: var(--font-serif); font-style: italic; font-size: 1.4rem; color: #E8E5DC;">
+          Data • Ideas • Content • Growth
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 1. Product Section -->
+  <section id="product" class="landing-section">
+    <div class="section-header">
+      <div class="section-pill">The Platform</div>
+      <h2 class="section-title">Engineered for YouTube Growth</h2>
+      <p class="section-subtext">
+        Five dedicated intelligence modules working together to diagnose audience drop-offs, uncover untapped niche demand, and build high-converting content strategies.
+      </p>
+    </div>
+
+    <div class="landing-grid-3" style="margin-bottom: 28px;">
+      <!-- Feature 1: Video Analysis -->
+      <div class="landing-card">
+        <div>
+          <div class="landing-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2.18"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3 class="landing-card-title">Deep Video Analysis</h3>
+          <p class="landing-card-desc">
+            Precision retention curve audits, pacing analysis, transcript density scoring, and title-thumbnail CTR prediction for any uploaded video or URL.
+          </p>
+        </div>
+        <a href="/login?return_to=%2Fvideo-analysis" class="landing-card-link">Explore Video Analysis →</a>
+      </div>
+
+      <!-- Feature 2: Ask AI Copilot -->
+      <div class="landing-card">
+        <div>
+          <div class="landing-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="landing-card-title">Ask AI Copilot</h3>
+          <p class="landing-card-desc">
+            Autonomous multi-tool agent equipped with live YouTube search, transcript inspection, persistent creator memory, and evidence-grounded strategic answers.
+          </p>
+        </div>
+        <a href="/login?return_to=%2Fask-ai" class="landing-card-link">Launch Ask AI Agent →</a>
+      </div>
+
+      <!-- Feature 3: Niche Radar -->
+      <div class="landing-card">
+        <div>
+          <div class="landing-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg>
+          </div>
+          <h3 class="landing-card-title">Niche Radar</h3>
+          <p class="landing-card-desc">
+            Live velocity tracking and market whitespace detector identifying breakout competitor videos, unsaturated topic formats, and trending audience hooks.
+          </p>
+        </div>
+        <a href="/login?return_to=%2Fniche-radar" class="landing-card-link">Inspect Niche Radar →</a>
+      </div>
+    </div>
+
+    <div class="landing-grid-2">
+      <!-- Feature 4: Creator Struggles -->
+      <div class="landing-card">
+        <div>
+          <div class="landing-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="landing-card-title">Creator Struggles Engine</h3>
+          <p class="landing-card-desc">
+            Diagnostic system identifying creative burnout triggers, audience churn, and algorithm distribution bottlenecks with actionable, prioritized remedies.
+          </p>
+        </div>
+        <a href="/login?return_to=%2Fcreator-struggles" class="landing-card-link">Solve Creator Struggles →</a>
+      </div>
+
+      <!-- Feature 5: Channel Workspace -->
+      <div class="landing-card">
+        <div>
+          <div class="landing-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="landing-card-title">Channel Intelligence Workspace</h3>
+          <p class="landing-card-desc">
+            Centralized command dashboard unifying channel velocity, subscriber trajectories, recent diagnostic audits, and team action items in real-time.
+          </p>
+        </div>
+        <a href="/login?return_to=%2Fdashboard" class="landing-card-link">View Workspace Dashboard →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. How It Works Section -->
+  <section id="how-it-works" class="landing-section">
+    <div class="section-header">
+      <div class="section-pill">Systematic Workflow</div>
+      <h2 class="section-title">How GrowTube Works</h2>
+      <p class="section-subtext">
+        From raw YouTube performance data to high-converting content strategies in three automated stages.
+      </p>
+    </div>
+
+    <div class="landing-grid-3">
+      <div class="workflow-step-card">
+        <div class="workflow-step-num">01</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #111416;">Connect or Target</h3>
+        <p style="font-size: 0.95rem; line-height: 1.55; color: #555B60; margin: 0;">
+          Connect your YouTube Studio account securely via OAuth or enter any public video URL to trigger instant diagnostic ingestion.
+        </p>
+      </div>
+
+      <div class="workflow-step-card">
+        <div class="workflow-step-num">02</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #111416;">Multi-Tool Agent Diagnostic</h3>
+        <p style="font-size: 0.95rem; line-height: 1.55; color: #555B60; margin: 0;">
+          Autonomous agent tools inspect retention curves, transcript pacing, search velocity, and competitor whitespace simultaneously.
+        </p>
+      </div>
+
+      <div class="workflow-step-card">
+        <div class="workflow-step-num">03</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #111416;">Evidence-Grounded Action Plan</h3>
+        <p style="font-size: 0.95rem; line-height: 1.55; color: #555B60; margin: 0;">
+          Receive prioritized growth recommendations with exact video timestamps, high-CTR thumbnail prompts, and script revisions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Working Interactive Demonstration Simulator -->
+    <div class="interactive-showcase">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--color-lime); text-transform: uppercase;">● Live Agent Simulation</span>
+          <h3 style="font-size: 1.35rem; color: #FFF; margin: 4px 0 0;">Inspect Agent Reasoning Outputs</h3>
+        </div>
+        <span style="font-size: 0.8rem; color: #8E959B;">Click tabs below to test simulated workflows:</span>
+      </div>
+
+      <div class="showcase-tabs" role="tablist">
+        <button type="button" class="showcase-tab active" data-target="panel-retention" role="tab">Retention Audit</button>
+        <button type="button" class="showcase-tab" data-target="panel-niche" role="tab">Competitor Whitespace</button>
+        <button type="button" class="showcase-tab" data-target="panel-titles" role="tab">Title & CTR Optimization</button>
+      </div>
+
+      <!-- Panel 1: Retention -->
+      <div id="panel-retention" class="showcase-panel active" role="tabpanel">
+        <div style="background: #191C1E; border: 1px solid #2B3035; border-radius: 10px; padding: 20px; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+          <div style="color: #2EC486; margin-bottom: 8px;">✓ Tool Executed: analyze_retention_curve(video_id="v_demo_982")</div>
+          <div style="color: #9BA3AB;">Critical drop detected at <strong style="color: #FFF;">00:42</strong> (-28% retention drop-off).</div>
+          <div style="color: #E05252; margin-top: 4px;">Root Cause: Generic channel intro and delayed premise delivery.</div>
+          <div style="color: #C4F22C; margin-top: 10px;">→ Recommended Action: Cut 00:25–00:45 intro. Lead with the visual outcome at 00:03. Expected retention lift: +14%.</div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Competitor Whitespace -->
+      <div id="panel-niche" class="showcase-panel" role="tabpanel">
+        <div style="background: #191C1E; border: 1px solid #2B3035; border-radius: 10px; padding: 20px; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+          <div style="color: #2EC486; margin-bottom: 8px;">✓ Tool Executed: search_trending_velocity(niche="AI Tools", lookback_days=7)</div>
+          <div style="color: #9BA3AB;">Top 5 competitor uploads averaging 142K views within 48h.</div>
+          <div style="color: #F5A623; margin-top: 4px;">Market Gap: High search volume on "local Ollama setup", but 0 recent high-retention step-by-step guides.</div>
+          <div style="color: #C4F22C; margin-top: 10px;">→ Recommended Opportunity: Publish 8-minute tutorial with downloadable configuration checklist within 48 hours.</div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Title & CTR -->
+      <div id="panel-titles" class="showcase-panel" role="tabpanel">
+        <div style="background: #191C1E; border: 1px solid #2B3035; border-radius: 10px; padding: 20px; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+          <div style="color: #2EC486; margin-bottom: 8px;">✓ Tool Executed: generate_title_variations(current_title="I tested an AI Agent")</div>
+          <div style="color: #9BA3AB;">Current CTR prediction: 3.4% (Below average for Tech/Education).</div>
+          <div style="color: #FFF; margin-top: 6px;">Variant A: "I Replaced My Entire Content Team with 1 Local AI" (Predicted CTR: 7.8%)</div>
+          <div style="color: #FFF;">Variant B: "The Autonomous YouTube Agent Nobody is Talking About" (Predicted CTR: 8.4%)</div>
+          <div style="color: #C4F22C; margin-top: 10px;">→ Grounded Insight: Use curiosity gap + concrete stakes to increase Browse feature impressions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Pricing Section -->
+  <section id="pricing" class="landing-section">
+    <div class="section-header">
+      <div class="section-pill">Transparent Access</div>
+      <h2 class="section-title">Simple, Honest Pricing</h2>
+      <p class="section-subtext">
+        We believe in proving value first. GrowTube is currently in Public Beta with 100% free access to all intelligence tools.
+      </p>
+    </div>
+
+    <div class="pricing-container">
+      <div class="pricing-card-main">
+        <div class="pricing-badge-popular">Community Beta</div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; color: #111416; margin-bottom: 4px;">Public Beta Access</h3>
+            <p style="color: #555B60; font-size: 0.95rem; margin: 0;">Full platform access while we build alongside creators.</p>
+          </div>
+          <div>
+            <span style="font-size: 3rem; font-weight: 800; font-family: var(--font-serif); color: #111416;">$0</span>
+            <span style="color: #6C7278; font-size: 1rem; font-weight: 500;">/ month</span>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid #E2DED5; padding-top: 24px; margin-bottom: 32px;">
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8E959B; margin-bottom: 16px;">What's Included:</h4>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; font-size: 0.92rem; color: #333;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Deep Video Retention Diagnostics
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Autonomous Ask AI Copilot with Tools
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Live Niche Radar & Velocity Discovery
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Creator Struggles & Burnout Diagnostics
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Multi-Channel Workspace Management
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #2EC486; font-weight: bold;">✓</span> Local Ollama AI or Cloud LLM Support
+            </div>
+          </div>
+        </div>
+
+        <a href="/login?return_to=%2Fanalyze" class="btn btn-lime" style="display: block; text-align: center; padding: 16px; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: var(--radius-sm); margin-bottom: 16px;">
+          Start Free Beta Access →
+        </a>
+
+        <div style="font-size: 0.8rem; color: #8E959B; line-height: 1.5; text-align: center;">
+          <strong>Commercial Tiers Notice:</strong> Commercial Studio and Agency tiers with high-volume batch processing and team seats will be introduced in future releases. All active beta members will receive advance notice before any pricing updates.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Resources Section -->
+  <section id="resources" class="landing-section">
+    <div class="section-header">
+      <div class="section-pill">Playbooks & Guides</div>
+      <h2 class="section-title">Creator Growth Resources</h2>
+      <p class="section-subtext">
+        Actionable frameworks, retention blueprints, and technical documentation developed from thousands of video audits.
+      </p>
+    </div>
+
+    <div class="landing-grid-2">
+      <!-- Resource 1 -->
+      <div class="landing-card">
+        <div>
+          <span class="resource-badge">Playbook</span>
+          <h3 class="landing-card-title">The 7-Point High-CTR Title Playbook</h3>
+          <p class="landing-card-desc">
+            Learn the exact formatting formulas that trigger YouTube's browse and suggested algorithms without misleading viewers or triggering clickbait penalties.
+          </p>
+        </div>
+        <button type="button" class="btn btn-dark btn-open-resource" data-resource="title-playbook" style="width: fit-content; padding: 8px 18px; font-size: 0.88rem;">
+          Read Playbook →
+        </button>
+      </div>
+
+      <!-- Resource 2 -->
+      <div class="landing-card">
+        <div>
+          <span class="resource-badge">Retention Blueprint</span>
+          <h3 class="landing-card-title">First 30 Seconds Retention Blueprint</h3>
+          <p class="landing-card-desc">
+            A battle-tested hook pacing framework that eliminates viewer bounce in the first 30 seconds through visual interrupts and immediate value delivery.
+          </p>
+        </div>
+        <button type="button" class="btn btn-dark btn-open-resource" data-resource="retention-blueprint" style="width: fit-content; padding: 8px 18px; font-size: 0.88rem;">
+          Read Blueprint →
+        </button>
+      </div>
+
+      <!-- Resource 3 -->
+      <div class="landing-card">
+        <div>
+          <span class="resource-badge">Architecture</span>
+          <h3 class="landing-card-title">Autonomous Agent Architecture Guide</h3>
+          <p class="landing-card-desc">
+            Technical breakdown of GrowTube's multi-step LLM loop, tool registry orchestration, persistent channel memory, and evidence grounding engine.
+          </p>
+        </div>
+        <button type="button" class="btn btn-dark btn-open-resource" data-resource="architecture-guide" style="width: fit-content; padding: 8px 18px; font-size: 0.88rem;">
+          Read Architecture →
+        </button>
+      </div>
+
+      <!-- Resource 4 -->
+      <div class="landing-card">
+        <div>
+          <span class="resource-badge">Documentation</span>
+          <h3 class="landing-card-title">Platform API & Webhook Reference</h3>
+          <p class="landing-card-desc">
+            Integrate GrowTube analytics into your workflow using REST endpoints for video analysis, Ask AI queries, and competitor radar alerts.
+          </p>
+        </div>
+        <button type="button" class="btn btn-dark btn-open-resource" data-resource="api-reference" style="width: fit-content; padding: 8px 18px; font-size: 0.88rem;">
+          View Documentation →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Resource Reader Modal -->
+  <div id="resource-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="resource-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E2DED5; padding-bottom: 16px; margin-bottom: 20px;">
+        <span id="modal-category" class="resource-badge" style="margin: 0;">Playbook</span>
+        <button type="button" id="modal-close-btn" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; line-height: 1;" aria-label="Close modal">&times;</button>
+      </div>
+      <h3 id="modal-title" style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 16px; color: #111416;">Resource Title</h3>
+      <div id="modal-content" style="font-size: 0.95rem; line-height: 1.7; color: #444;">
+        <!-- Dynamic Content Injected Here -->
+      </div>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid #E2DED5; display: flex; justify-content: flex-end;">
+        <button type="button" id="modal-done-btn" class="btn btn-lime" style="padding: 10px 24px; font-weight: 600;">Close Guide</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="landing-footer-container">
+      <div style="max-width: 380px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span style="font-weight: 700; font-size: 1.25rem;">GrowTube</span>
+        </div>
+        <p style="font-size: 0.88rem; color: #6C7278; line-height: 1.5; margin-bottom: 16px;">
+          Evidence-grounded YouTube intelligence platform powered by autonomous AI agent loops, multi-tool diagnostics, and creator memory.
+        </p>
+        <div style="font-size: 0.8rem; color: #8E959B;">
+          &copy; 2026 GrowTube Platform. All rights reserved.
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #111416; margin-bottom: 16px;">Navigation</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="#product" style="color: #555B60; text-decoration: none;">Product Features</a></li>
+          <li><a href="#how-it-works" style="color: #555B60; text-decoration: none;">How It Works</a></li>
+          <li><a href="#pricing" style="color: #555B60; text-decoration: none;">Public Beta Pricing</a></li>
+          <li><a href="#resources" style="color: #555B60; text-decoration: none;">Creator Resources</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #111416; margin-bottom: 16px;">Access</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="/login" style="color: #555B60; text-decoration: none;">Sign In</a></li>
+          <li><a href="/login?return_to=%2Fanalyze" style="color: #555B60; text-decoration: none;">Create Account</a></li>
+          <li><a href="/login?return_to=%2Fdashboard" style="color: #555B60; text-decoration: none;">Channel Workspace</a></li>
+          <li><a href="/api/health" target="_blank" rel="noopener noreferrer" style="color: #2EC486; text-decoration: none;">System Status: Operational ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Landing Script (Auth-aware UI, Interactive Showcase, and Resource Modals) -->
+  <script type="module">
+    import { auth } from "/js/auth.js";
+
+    // 1. Session Detection: Update navigation and CTA buttons if user is already signed in
+    async function updateAuthStatus() {
+      try {
+        const user = await auth.checkSession();
+        if (user) {
+          const authContainer = document.getElementById("nav-auth-container");
+          if (authContainer) {
+            authContainer.innerHTML = `
+              <a href="/dashboard" class="btn btn-lime" style="padding: 9px 18px; font-weight: 600; text-decoration: none;">Workspace Dashboard →</a>
+              <button id="btn-landing-logout" style="background: none; border: none; font-size: 0.88rem; font-weight: 600; color: #666; cursor: pointer; padding: 6px;">Sign Out</button>
+            `;
+            document.getElementById("btn-landing-logout")?.addEventListener("click", () => auth.logout());
+          }
+
+          const heroCta = document.getElementById("hero-cta-analyze");
+          if (heroCta) {
+            heroCta.href = "/analyze";
+            heroCta.textContent = "Open Analysis Workspace →";
+          }
+        }
+      } catch (err) {
+        // Unauthenticated session, retain standard Sign In & Get Started buttons
+      }
+    }
+    updateAuthStatus();
+
+    // 2. Interactive Showcase Tab Switching
+    const tabs = document.querySelectorAll(".showcase-tab");
+    const panels = document.querySelectorAll(".showcase-panel");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        panels.forEach(p => p.classList.remove("active"));
+        tab.classList.add("active");
+        const targetId = tab.getAttribute("data-target");
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) targetPanel.classList.add("active");
+      });
+    });
+
+    // 3. Resource Reader Content & Modal
+    const resourceData = {
+      "title-playbook": {
+        category: "Playbook",
+        title: "The 7-Point High-CTR Title Playbook",
+        content: `
+          <p>YouTube titles must balance <strong>Browse curiosity</strong> with <strong>Search clarity</strong>. Use this 7-point checklist before every upload:</p>
+          <ol style="padding-left: 20px; line-height: 1.8;">
+            <li><strong>Lead with the emotional hook:</strong> Place high-impact verbs or stakes within the first 45 characters so mobile thumbnails do not truncate them.</li>
+            <li><strong>Create an information gap:</strong> Pose a scenario that cannot be answered without watching the video (e.g. <em>"What Actually Happens When..."</em>).</li>
+            <li><strong>Avoid verbatim thumbnail repetition:</strong> If your thumbnail says "DON'T DO THIS", your title should explain the context: <em>"The 1 Mistake Destroying Your Channel"</em>.</li>
+            <li><strong>Quantify stakes concretely:</strong> Use numbers, timeframes, or dollar amounts instead of vague superlatives (e.g., <em>"in 14 Days"</em> vs <em>"Quickly"</em>).</li>
+            <li><strong>Eliminate filler words:</strong> Remove "How To", "Ep 12", and channel names from the title front.</li>
+            <li><strong>Verify search query intent:</strong> Ensure your core topic keyword matches real YouTube search queries identified in Niche Radar.</li>
+            <li><strong>Test 3 variants before publishing:</strong> Use GrowTube's title generator to simulate CTR against competitor averages in your niche.</li>
+          </ol>
+        `
+      },
+      "retention-blueprint": {
+        category: "Retention Blueprint",
+        title: "First 30 Seconds Retention Blueprint",
+        content: `
+          <p>Over 70% of audience drop-offs occur before the 00:45 mark. The 30-Second Retention Blueprint structures your opening for maximum watch-time survival:</p>
+          <ul style="padding-left: 20px; line-height: 1.8;">
+            <li><strong>00:00–00:05 (The Confirmation):</strong> Immediately show the visual payoff promised by the thumbnail. Do not show channel logos or say "Welcome back to the channel".</li>
+            <li><strong>00:05–00:15 (The Stakes):</strong> Establish why this outcome was difficult or what happens if the viewer does not learn this solution.</li>
+            <li><strong>00:15–00:25 (The Roadmap):</strong> Give a fast, energetic preview of the steps or tests that will unfold without revealing the final climax.</li>
+            <li><strong>00:25–00:30 (Pattern Interrupt):</strong> Introduce a sharp cut, sound cue, or graphic overlay before the first substantive step begins.</li>
+          </ul>
+          <p style="margin-top: 14px; background: #F8F6F0; padding: 12px; border-left: 3px solid #C4F22C; font-size: 0.88rem;">
+            <strong>Pro Tip:</strong> Run your draft video through GrowTube Deep Video Analysis to verify retention drop forecasts before rendering your final master.
+          </p>
+        `
+      },
+      "architecture-guide": {
+        category: "Architecture",
+        title: "Autonomous Agent Architecture Guide",
+        content: `
+          <p>GrowTube is built on an autonomous, multi-turn AI agent runtime engineered specifically for YouTube creators:</p>
+          <ul style="padding-left: 20px; line-height: 1.8;">
+            <li><strong>Orchestration Loop:</strong> Uses a structured ReAct agent loop (Think → Act → Observe → Verify) to prevent hallucinated advice.</li>
+            <li><strong>Tool Registry:</strong> Equipped with live tools including YouTube transcript fetchers, video velocity trackers, search analyzers, and creator memory stores.</li>
+            <li><strong>Persistent Creator Memory:</strong> Retains channel goals, historical baseline metrics, and tone preferences across conversations.</li>
+            <li><strong>Evidence Grounding Engine:</strong> Every recommendation links directly to exact timestamp citations, verified competitor stats, or mathematical velocity calculations.</li>
+          </ul>
+        `
+      },
+      "api-reference": {
+        category: "Documentation",
+        title: "Platform API & Webhook Reference",
+        content: `
+          <p>Developers and studio teams can integrate GrowTube diagnostics directly into their automated production workflows via REST endpoints:</p>
+          <pre style="background: #111416; color: #E8E5DC; padding: 14px; border-radius: 8px; font-family: var(--font-mono); font-size: 0.82rem; overflow-x: auto;">
+GET  /api/v1/auth/me                  # Session identity & workspaces
+GET  /api/v1/channels/{id}/overview   # Real-time channel analytics
+POST /api/v1/agent/chat               # Ask AI autonomous multi-tool query
+POST /api/v1/radar/query              # Niche velocity & whitespace query
+POST /api/v1/struggles/diagnose       # Creator friction diagnostics
+          </pre>
+          <p style="margin-top: 12px; font-size: 0.88rem; color: #666;">
+            All API endpoints require an active session cookie (<code>growtube_session</code>) or Bearer authentication token, with CSRF protection enabled on mutating requests.
+          </p>
+        `
+      }
+    };
+
+    const modal = document.getElementById("resource-modal");
+    const modalCategory = document.getElementById("modal-category");
+    const modalTitle = document.getElementById("modal-title");
+    const modalContent = document.getElementById("modal-content");
+    const modalCloseBtn = document.getElementById("modal-close-btn");
+    const modalDoneBtn = document.getElementById("modal-done-btn");
+
+    function openModal(resourceKey) {
+      const data = resourceData[resourceKey];
+      if (!data) return;
+      modalCategory.textContent = data.category;
+      modalTitle.textContent = data.title;
+      modalContent.innerHTML = data.content;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".btn-open-resource").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-resource");
+        openModal(key);
+      });
+    });
+
+    modalCloseBtn?.addEventListener("click", closeModal);
+    modalDoneBtn?.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+  </script>
+</body>
+</html>

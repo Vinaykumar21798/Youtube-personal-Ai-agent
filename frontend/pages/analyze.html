@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyze Channel — GrowTube</title>
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </div>
+        <span>GrowTube</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/dashboard" class="nav-item">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          Home
+        </a>
+        <a href="/niche-radar" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="2" y1="12" x2="4" y2="12"></line></svg>
+          Niche Radar
+        </a>
+        <a href="/creator-struggles" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Creator Struggles
+        </a>
+        <a href="/ask-ai" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Ask AI
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-container">
+        
+        <!-- SECTION 1: Submission Input (Before job start) -->
+        <div id="analyze-input-section" class="card" style="max-width: 780px; margin: 40px auto; padding: 40px;">
+          <h2 style="font-size: 2rem; margin-bottom: 8px;">Analyze Channel or Video</h2>
+          <p style="color: #9BA3AB; margin-bottom: 32px;">
+            Submit a public YouTube channel URL, video URL, or upload analytics exports to run the agentic workflow.
+          </p>
+
+          <!-- Uploaded File Display Card (Visible immediately when a file is selected) -->
+          <div id="uploaded-file-card" class="card" style="display: none; padding: 18px 20px; margin-bottom: 24px; background: rgba(196, 242, 44, 0.05); border: 1px solid var(--color-lime);">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="font-size: 2rem;">📄</div>
+                <div>
+                  <div id="uploaded-file-name" style="font-weight: 700; color: #F0F2F5; font-size: 1rem;">analytics.csv</div>
+                  <div style="font-size: 0.8rem; color: #9BA3AB;">
+                    <span id="uploaded-file-size">--</span> • <span class="badge badge-lime" style="padding: 2px 6px; font-size: 0.72rem;">File Attached</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <button type="button" id="btn-analyze-uploaded-file" class="btn btn-lime btn-sm">Analyze Uploaded File →</button>
+                <button type="button" id="btn-remove-uploaded-file" class="btn btn-dark btn-sm">✕ Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <form id="analyze-form">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.85rem; color: #8E959B; margin-bottom: 8px;">
+                Option 1: YouTube Channel URL / Handle / Video URL
+              </label>
+              <div style="display: flex; gap: 12px;">
+                <input
+                  type="text"
+                  id="channel-url-input"
+                  class="input-field"
+                  placeholder="e.g. https://www.youtube.com/watch?v=... or https://youtu.be/... or @channel"
+                >
+                <button type="submit" id="start-analyze-btn" class="btn btn-lime" style="white-space: nowrap; padding: 12px 24px;">
+                  Analyze URL →
+                </button>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 16px; margin: 24px 0;">
+              <div style="flex: 1; height: 1px; background: var(--color-surface-dark-border);"></div>
+              <span style="font-size: 0.8rem; color: #6E7681; font-weight: 600; text-transform: uppercase;">or upload files</span>
+              <div style="flex: 1; height: 1px; background: var(--color-surface-dark-border);"></div>
+            </div>
+
+            <!-- Option 2: Drag & Drop Area -->
+            <div id="dropzone-area" style="border: 2px dashed #2A2E32; border-radius: 12px; background: #131517; padding: 28px; text-align: center; cursor: pointer; transition: border-color 0.2s;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6E7681" stroke-width="1.5" style="margin-bottom: 8px;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <div style="font-size: 0.95rem; font-weight: 600; color: #F0F2F5; margin-bottom: 4px;">Option 2: Upload Analytics Export or Transcript</div>
+              <div style="font-size: 0.8rem; color: #8E959B; margin-bottom: 12px;">Drop your .csv, .json, .txt, .srt, or .vtt file here, or click to browse</div>
+              <button type="button" id="upload-trigger-btn" class="btn btn-dark btn-sm">📁 Choose File</button>
+              <input type="file" id="analytics-file-input" style="display: none;" accept=".csv,.json,.txt,.srt,.vtt">
+            </div>
+          </form>
+
+          <div style="border-top: 1px solid var(--color-surface-dark-border); padding-top: 20px; font-size: 0.82rem; color: #6E7681;">
+            🔒 Safe & Bounded: Read-only metadata analysis. Does not modify your channel or publish assets.
+          </div>
+        </div>
+
+        <!-- SECTION 2: Active Agent Workflow (Dynamic execution) -->
+        <div id="workflow-active-section" class="analysis-workflow-container" style="display: none;">
+          <div class="workflow-header">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <div>
+                <h2 id="workflow-target-heading" style="font-size: 2rem; color: #F0F2F5;">Analyzing your channel</h2>
+                <p id="workflow-target-subtext" style="color: #9BA3AB;">Our AI agents are processing your target through the verification pipeline.</p>
+              </div>
+              <a href="/dashboard" class="btn btn-dark btn-sm">Cancel</a>
+            </div>
+
+            <!-- Progress bar -->
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #9BA3AB; margin-top: 16px;">
+              <span id="workflow-current-step-label">Initializing...</span>
+              <span id="workflow-progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div id="workflow-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px;">
+            <!-- Left: Stepper Checklist -->
+            <div class="step-checklist">
+              <div id="step-row-1" class="step-row">
+                <div class="step-label">
+                  <span style="width: 20px; height: 20px; border-radius: 50%; background: #2A2E32; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">1</span>
+                  <span>Collecting Data</span>
+                </div>
+                <span id="step-badge-1" class="step-status-badge">Queued</span>
+              </div>
+
+              <div id="step-row-2" class="step-row">
+                <div class="step-label">
+                  <span style="width: 20px; height: 20px; border-radius: 50%; background: #2A2E32; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">2</span>
+                  <span>Analyzing Content</span>
+                </div>
+                <span id="step-badge-2" class="step-status-badge">Queued</span>
+              </div>
+
+              <div id="step-row-3" class="step-row">
+                <div class="step-label">
+                  <span style="width: 20px; height: 20px; border-radius: 50%; background: #2A2E32; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">3</span>
+                  <span>Researching Opportunities</span>
+                </div>
+                <span id="step-badge-3" class="step-status-badge">Queued</span>
+              </div>
+
+              <div id="step-row-4" class="step-row">
+                <div class="step-label">
+                  <span style="width: 20px; height: 20px; border-radius: 50%; background: #2A2E32; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">4</span>
+                  <span>Generating Insights</span>
+                </div>
+                <span id="step-badge-4" class="step-status-badge">Queued</span>
+              </div>
+
+              <div id="step-row-5" class="step-row">
+                <div class="step-label">
+                  <span style="width: 20px; height: 20px; border-radius: 50%; background: #2A2E32; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">5</span>
+                  <span>Finalizing Report</span>
+                </div>
+                <span id="step-badge-5" class="step-status-badge">Queued</span>
+              </div>
+            </div>
+
+            <!-- Right: Agent Activity Terminal -->
+            <div class="terminal-box">
+              <div class="terminal-title">
+                <span>Agent Activity</span>
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-lime);"></span>
+              </div>
+              <div id="terminal-logs-stream">
+                <div class="log-entry">
+                  <span class="log-time">--:--</span>
+                  <span class="log-text">Waiting for agent dispatch...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/analyze.js"></script>
+  <script type="module" src="/js/navigation.js"></script>
+</body>
+</html>

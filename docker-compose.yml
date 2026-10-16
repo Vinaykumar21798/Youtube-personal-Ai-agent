@@ -1,0 +1,39 @@
+services:
+  api:
+    build: .
+    container_name: growtube-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:////app/data/growtube.db
+      - SECRET_KEY=${SECRET_KEY:-growtube-production-random-secret-key-32-chars}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:-}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET:-}
+      - GOOGLE_REDIRECT_URI=${GOOGLE_REDIRECT_URI:-http://localhost:8000/api/v1/auth/google/callback}
+      - SESSION_COOKIE_NAME=${SESSION_COOKIE_NAME:-growtube_session}
+      - SESSION_COOKIE_SECURE=${SESSION_COOKIE_SECURE:-false}
+      - CSRF_COOKIE_NAME=${CSRF_COOKIE_NAME:-growtube_csrf}
+      - CSRF_SECRET=${CSRF_SECRET:-growtube-csrf-secret-key-32-chars-long}
+    volumes:
+      - ./data:/app/data
+      - uploads_data:/app/uploads
+
+  worker:
+    build: .
+    container_name: growtube-worker
+    restart: unless-stopped
+    command: ["python", "-m", "app.workers.worker"]
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:////app/data/growtube.db
+      - SECRET_KEY=${SECRET_KEY:-growtube-production-random-secret-key-32-chars}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY:-}
+    volumes:
+      - ./data:/app/data
+      - uploads_data:/app/uploads
+
+volumes:
+  uploads_data:
+
