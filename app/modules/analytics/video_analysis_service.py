@@ -669,9 +669,25 @@ class VideoAnalysisService:
         clean = res.strip()
         if clean.startswith("```"):
             clean = clean.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
-        data = json.loads(clean)
+        try:
+            data = json.loads(clean)
+        except Exception:
+            return None
         if isinstance(data, list) and len(data) >= 3:
-            return data
+            normalized = []
+            for item in data:
+                if isinstance(item, dict):
+                    conf = item.get("confidence")
+                    if isinstance(conf, (int, float)):
+                        conf_str = f"{int(conf * 100) if conf <= 1.0 else int(conf)}% Confidence"
+                    elif not conf:
+                        conf_str = "High Evidence"
+                    else:
+                        conf_str = str(conf)
+                    item["confidence"] = conf_str
+                    normalized.append(item)
+            if len(normalized) >= 3:
+                return normalized
         return None
 
     def _generate_title_and_thumbnail_concepts(

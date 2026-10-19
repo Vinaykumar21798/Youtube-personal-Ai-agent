@@ -76,6 +76,20 @@ export async function runVideoAnalysis(targetUrlOrId) {
   }
 }
 
+function formatConfidenceBadge(confidence) {
+  if (confidence === null || confidence === undefined) return "Verified";
+  if (typeof confidence === "number") {
+    return confidence <= 1 ? `${Math.round(confidence * 100)}%` : `${confidence}%`;
+  }
+  const str = String(confidence).trim();
+  if (!str) return "Verified";
+  const num = Number(str);
+  if (!isNaN(num) && isFinite(num) && !str.includes(" ")) {
+    return num <= 1 && num > 0 ? `${Math.round(num * 100)}%` : `${num}%`;
+  }
+  return str.split(" ")[0];
+}
+
 function renderVideoAnalysis(data) {
   const v = data.video || {};
   const score = data.performance_score || {};
@@ -210,13 +224,13 @@ function renderVideoAnalysis(data) {
     insightsContainer.innerHTML = (data.key_insights || []).map((ins, idx) => `
       <div class="va-insight-card">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px;">
-          <div class="va-insight-problem">${idx + 1}. ${ins.problem}</div>
-          <span class="va-badge-pill va-badge-lime" style="font-size: 0.65rem; white-space: nowrap;">${ins.confidence.split(" ")[0]}</span>
+          <div class="va-insight-problem">${idx + 1}. ${ins.problem || ""}</div>
+          <span class="va-badge-pill va-badge-lime" style="font-size: 0.65rem; white-space: nowrap;">${formatConfidenceBadge(ins.confidence)}</span>
         </div>
-        <div class="va-insight-evidence"><strong>Evidence:</strong> ${ins.evidence}</div>
-        <div style="font-size: 0.76rem; color: #64748B; margin-bottom: 4px;"><strong>Baseline:</strong> ${ins.baseline}</div>
-        <div style="font-size: 0.78rem; color: #475569; margin-bottom: 6px;"><strong>Root Cause:</strong> ${ins.explanation}</div>
-        <div class="va-insight-rec"><strong>Actionable Fix:</strong> ${ins.recommendation}</div>
+        <div class="va-insight-evidence"><strong>Evidence:</strong> ${ins.evidence || ""}</div>
+        <div style="font-size: 0.76rem; color: #64748B; margin-bottom: 4px;"><strong>Baseline:</strong> ${ins.baseline || ""}</div>
+        <div style="font-size: 0.78rem; color: #475569; margin-bottom: 6px;"><strong>Root Cause:</strong> ${ins.explanation || ""}</div>
+        <div class="va-insight-rec"><strong>Actionable Fix:</strong> ${ins.recommendation || ""}</div>
       </div>
     `).join("");
   }
@@ -227,11 +241,11 @@ function renderVideoAnalysis(data) {
     addInsightsWrap.innerHTML = (data.additional_insights || []).map((ins, idx) => `
       <div class="va-insight-card" style="border-left-color: #94A3B8;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px;">
-          <div class="va-insight-problem">${idx + 4}. ${ins.problem}</div>
-          <span class="va-badge-pill va-badge-neutral" style="font-size: 0.65rem;">${ins.confidence.split(" ")[0]}</span>
+          <div class="va-insight-problem">${idx + 4}. ${ins.problem || ""}</div>
+          <span class="va-badge-pill va-badge-neutral" style="font-size: 0.65rem;">${formatConfidenceBadge(ins.confidence)}</span>
         </div>
-        <div class="va-insight-evidence"><strong>Evidence:</strong> ${ins.evidence}</div>
-        <div class="va-insight-rec"><strong>Actionable Fix:</strong> ${ins.recommendation}</div>
+        <div class="va-insight-evidence"><strong>Evidence:</strong> ${ins.evidence || ""}</div>
+        <div class="va-insight-rec"><strong>Actionable Fix:</strong> ${ins.recommendation || ""}</div>
       </div>
     `).join("");
   }
